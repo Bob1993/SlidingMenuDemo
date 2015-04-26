@@ -77,27 +77,27 @@ public class LeftFragment extends Fragment implements OnClickListener{
 		switch (v.getId()) {
 		case R.id.tvToday: // 今日
 			newContent = new TodayFragment();
-			title = getString(R.string.today);
+			title = getString(R.string.item_1);
 			break;
 		case R.id.tvLastlist:// 往期列表
 			newContent = new LastListFragment();
-			title = getString(R.string.lastList);
+			title = getString(R.string.item_2);
 			break;
 		case R.id.tvDiscussMeeting: // 讨论集会
 			newContent = new DiscussFragment();
-			title = getString(R.string.discussMeetting);
+			title = getString(R.string.item_3);
 			break;
 		case R.id.tvMyFavorites: // 我的收藏
 			newContent = new MyFavoritesFragment();
-			title = getString(R.string.myFavorities);
+			title = getString(R.string.item_4);
 			break;
 		case R.id.tvMyComments: // 我的评论
 			newContent = new MyCommentsFragment();
-			title = getString(R.string.myComments);
+			title = getString(R.string.item_5);
 			break;
 		case R.id.tvMySettings: // 设置
 			newContent = new MySettingsFragment();
-			title = getString(R.string.settings);
+			title = getString(R.string.item_6);
 			break;
 		default:
 			break;

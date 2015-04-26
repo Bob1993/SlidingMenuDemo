@@ -56,7 +56,7 @@ public class MainActivity extends SlidingFragmentActivity implements
         sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);//设置菜单宽度
         sm.setFadeDegree(0.35f);//设置渐入渐出效果参数
         sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);//设置全屏滑动
-        sm.setBehindScrollScale(0.35f);//设置下方视图在滚动时的缩放比例
+        sm.setBehindScrollScale(0.0f);//设置下方视图在滚动时的缩放比例
 
     }
 
@@ -67,7 +67,7 @@ public class MainActivity extends SlidingFragmentActivity implements
         //在活动被暂停时，利用manager给数据束里添加当前显示的fragment，以便在程序返回MainActivity时又重新显示离开时的样子
     }
 
-    public void switchContent(Fragment fragment, String title) {
+    public void switchContent(Fragment fragment, String title) {//点击切换后空FrameLayout才会被填入（替换）为新的fragment
         mContent= fragment;
         getFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
         //植入或者称替换掉当前显示的fragment，其中content_frame为当前显示页面的父布局

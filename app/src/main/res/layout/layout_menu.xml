@@ -2,38 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="@mipmap/biz_news_local_weather_bg_big"
+    android:background="#ffffffff"
     android:orientation="vertical" >
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp" 
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
 
-        <!--自定义的圆形ImageView-->
+        <!--自定义的圆形ImageView,如果图片为透明色，可以有更简单的处理方式-->
         <com.bob.slidingmenu.view.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/wwj_748"
+            android:src="@mipmap/head"
             app:border_color="#FFffffff"
-            app:border_width="1dp" />
+            app:border_width="1dp"
+            />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="28.0dip"
-            android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/profile_image"
             android:gravity="center_vertical"
-            android:paddingLeft="15.0dip"
-            android:text="IT_xiao小巫"
-            android:textColor="@color/white"
-            android:textSize="14.0sp" />
+            android:text="Bob1993"
+            android:textColor="@color/black"
+            android:textSize="14.0sp"
+            android:layout_below="@id/profile_image"
+            />
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvToday"
@@ -44,8 +47,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="15.0dip"
         android:paddingRight="10.0dip"
-        android:text="今日"
-        android:textColor="@color/white"
+        android:text="@string/item_1"
+        android:textColor="@color/black"
         android:textSize="16.0sp" />
 
     <View
@@ -62,8 +65,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="15.0dip"
         android:paddingRight="10.0dip"
-        android:text="往期列表"
-        android:textColor="@color/white"
+        android:text="@string/item_2"
+        android:textColor="@color/black"
         android:textSize="16.0sp" />
 
     <View
@@ -80,8 +83,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="15.0dip"
         android:paddingRight="10.0dip"
-        android:text="讨论集会"
-        android:textColor="@color/white"
+        android:text="@string/item_3"
+        android:textColor="@color/black"
         android:textSize="16.0sp" />
 
     <View
@@ -97,8 +100,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="15.0dip"
         android:paddingRight="10.0dip"
-        android:text="我的收藏"
-        android:textColor="@color/white"
+        android:text="@string/item_4"
+        android:textColor="@color/black"
         android:textSize="16.0sp" />
 
     <View
@@ -114,8 +117,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="15.0dip"
         android:paddingRight="10.0dip"
-        android:text="我的评论"
-        android:textColor="@color/white"
+        android:text="@string/item_5"
+        android:textColor="@color/black"
         android:textSize="16.0sp" />
 
     <View
@@ -131,8 +134,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="15.0dip"
         android:paddingRight="10.0dip"
-        android:text="设置"
-        android:textColor="@color/white"
+        android:text="@string/item_6"
+        android:textColor="@color/black"
         android:textSize="16.0sp" />
 
     <View

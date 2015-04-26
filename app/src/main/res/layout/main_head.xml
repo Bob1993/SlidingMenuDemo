@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/light_blue" >
+    android:background="#ff9a9b9b" >
 
     <ImageView
         android:id="@+id/topButton"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="今日"
+        android:text="It is a Title"
         android:textColor="@color/white"
         android:textSize="21sp"
         android:textStyle="bold" />
