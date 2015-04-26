@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.view.View.OnClickListener;
 
 import com.bob.slidingmenu.fragment.LeftFragment;
-import com.bob.slidingmenu.fragment.TodayFragment;
+import com.bob.slidingmenu.fragment.Fragment_1;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 
@@ -23,10 +23,10 @@ public class MainActivity extends SlidingFragmentActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initSlidingMenu(savedInstanceState);//用可能包含有数据的bundle来初始化侧边栏菜单
         topButton= (ImageView) findViewById(R.id.topButton);
         topButton.setOnClickListener(this);
         titleView= (TextView) findViewById(R.id.topTv);
+        initSlidingMenu(savedInstanceState);//用可能包含有数据的bundle来初始化侧边栏菜单
     }
 
     private void initSlidingMenu(Bundle saveInstanceState){
@@ -36,7 +36,9 @@ public class MainActivity extends SlidingFragmentActivity implements
         }
         if (mContent== null)
         {//没能从数据集中获取到fragment，表示第一次初始化侧边栏，默认显示Today
-            mContent= new TodayFragment();//一定要注意v4包与app包的引入区分
+            mContent= new Fragment_1();//一定要注意v4包与app包的引入区分
+            getFragmentManager().beginTransaction().replace(R.id.content_frame, mContent).commit();
+            titleView.setText("Sunday");//在这里必须要把默认的mContent替换进去，要不然Manager里边是没有的
         }
 
 		/** 设置左侧滑动菜单

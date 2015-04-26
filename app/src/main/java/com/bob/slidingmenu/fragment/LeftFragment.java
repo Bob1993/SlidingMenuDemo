@@ -11,17 +11,17 @@ import android.view.ViewGroup;
 import com.bob.slidingmenu.MainActivity;
 import com.bob.slidingmenu.R;
 /**
- * @date 2014/11/14
- * @author wuwenjie
+ * @date 2015/4/26
+ * @author bob
  * @description 侧边栏菜单
  */
 public class LeftFragment extends Fragment implements OnClickListener{
-	private View todayView;
-	private View lastListView;
-	private View discussView;
-	private View favoritesView;
-	private View commentsView;
-	private View settingsView;
+	private View view_1;
+	private View view_2;
+	private View view_3;
+	private View view_4;
+	private View view_5;
+	private View view_6;
 	
 	
 	@Override
@@ -45,19 +45,19 @@ public class LeftFragment extends Fragment implements OnClickListener{
 	
 	
 	public void findViews(View view) {
-		todayView = view.findViewById(R.id.tvToday);
-		lastListView = view.findViewById(R.id.tvLastlist);
-		discussView = view.findViewById(R.id.tvDiscussMeeting);
-		favoritesView = view.findViewById(R.id.tvMyFavorites);
-		commentsView = view.findViewById(R.id.tvMyComments);
-		settingsView = view.findViewById(R.id.tvMySettings);
+		view_1 = view.findViewById(R.id.sunday);
+		view_2 = view.findViewById(R.id.monday);
+		view_3 = view.findViewById(R.id.tuesday);
+		view_4 = view.findViewById(R.id.wednesday);
+		view_5 = view.findViewById(R.id.thursday);
+		view_6 = view.findViewById(R.id.friday);
 		
-		todayView.setOnClickListener(this);
-		lastListView.setOnClickListener(this);
-		discussView.setOnClickListener(this);
-		favoritesView.setOnClickListener(this);
-		commentsView.setOnClickListener(this);
-		settingsView.setOnClickListener(this);
+		view_1.setOnClickListener(this);
+		view_2.setOnClickListener(this);
+		view_3.setOnClickListener(this);
+		view_4.setOnClickListener(this);
+		view_5.setOnClickListener(this);
+		view_6.setOnClickListener(this);
 	}
 	
 	@Override
@@ -75,28 +75,28 @@ public class LeftFragment extends Fragment implements OnClickListener{
 		Fragment newContent = null;
 		String title = null;
 		switch (v.getId()) {
-		case R.id.tvToday: // 今日
-			newContent = new TodayFragment();
+		case R.id.sunday: // 周日
+			newContent = new Fragment_1();
 			title = getString(R.string.item_1);
 			break;
-		case R.id.tvLastlist:// 往期列表
-			newContent = new LastListFragment();
+		case R.id.monday:// 周一
+			newContent = new Fragment_2();
 			title = getString(R.string.item_2);
 			break;
-		case R.id.tvDiscussMeeting: // 讨论集会
-			newContent = new DiscussFragment();
+		case R.id.tuesday: // 周二
+			newContent = new Fragment_3();
 			title = getString(R.string.item_3);
 			break;
-		case R.id.tvMyFavorites: // 我的收藏
-			newContent = new MyFavoritesFragment();
+		case R.id.wednesday: // 周三
+			newContent = new Fragment_4();
 			title = getString(R.string.item_4);
 			break;
-		case R.id.tvMyComments: // 我的评论
-			newContent = new MyCommentsFragment();
+		case R.id.thursday: // 周四
+			newContent = new Fragment_5();
 			title = getString(R.string.item_5);
 			break;
-		case R.id.tvMySettings: // 设置
-			newContent = new MySettingsFragment();
+		case R.id.friday: // 周五
+			newContent = new Fragment_6();
 			title = getString(R.string.item_6);
 			break;
 		default:

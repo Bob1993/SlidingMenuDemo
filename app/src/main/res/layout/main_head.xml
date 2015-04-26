@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#ff9a9b9b" >
+    android:layout_height="40dp"
+    android:background="#ff9a9b9b">
 
     <ImageView
         android:id="@+id/topButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
         android:src="@mipmap/ic_top_bar_category" />
 
-    <TextView
+        <TextView
         android:id="@+id/topTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="It is a Title"
         android:textColor="@color/white"
         android:textSize="21sp"
         android:textStyle="bold" />
